@@ -9,7 +9,7 @@ void ui_push_log(const char *msg);
 
 /* UI entry */
 void wildlife_ui_init(void);
-void wildlife_app_start(void);
-void Hang2Hang(void);
+void wildlife_ui_module_start(void);
+void wildlife_ui_module_entry(void);
 
 #endif

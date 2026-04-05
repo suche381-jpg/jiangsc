@@ -49,7 +49,6 @@ typedef struct {
 static wildlife_ui_ctx_t g_ui;
 static int16_t g_selected_view_idx = -1;
 static char g_logs[1024];
-static lv_obj_t *g_keyboard;
 
 #define WL_PIE_CANVAS_W 260
 #define WL_PIE_CANVAS_H 260
@@ -68,7 +67,6 @@ static void ui_refresh_all(void);
 static void ui_refresh_table(void);
 static void ui_refresh_detail(void);
 static void ui_refresh_dashboard(void);
-static void ui_refresh_edit_form(void);
 static void ui_refresh_filter_options(void);
 static void ui_refresh_status_pie(const wildlife_stats_t *stats);
 
@@ -759,7 +757,6 @@ void wildlife_ui_init(void)
 
     memset(&g_ui, 0, sizeof(g_ui));
     memset(g_logs, 0, sizeof(g_logs));
-    g_keyboard = NULL;
 
     lv_obj_clean(lv_scr_act());
     lv_obj_clear_flag(lv_scr_act(), LV_OBJ_FLAG_SCROLLABLE);
@@ -776,12 +773,12 @@ void wildlife_ui_init(void)
     wildlife_core_boot(1U);
 }
 
-void wildlife_app_start(void)
+void wildlife_ui_module_start(void)
 {
     wildlife_ui_init();
 }
 
-void Hang2Hang(void)
+void wildlife_ui_module_entry(void)
 {
     wildlife_ui_init();
 }
