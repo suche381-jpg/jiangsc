@@ -202,7 +202,7 @@
 
 ---
 
-## 9. 数据格式约定（计划书补充）
+## 9. 数据格式约定
 
 ### 10.1 记录结构约定
 系统统一使用 wildlife_record_t 作为档案实体，字段约定如下：
@@ -270,9 +270,11 @@ wildlife_stats_t 字段语义：
 5. total_quantity：当前过滤结果数量总和。  
 6. status_percent[5]：五类状态整数百分比，必须满足总和 100（最大余数法修正）。
 
+
+### 10.7 **通知方式约定（todo）**
 ---
 
-## 10. 函数功能约定（计划书补充）
+## 10. 函数功能约定
 
 ### 11.1 设计原则
 
@@ -376,7 +378,7 @@ wildlife_result_t 语义建议：
 1. WL_OK：成功。  
 2. WL_ERR_PARAM：参数非法。  
 3. WL_ERR_NOT_FOUND：目标不存在。  
-4. WL_ERR_NO_SPACE：容量不足。  
+4. WL_ERR_NO_SPACE：容量不足或无空槽。  
 5. WL_ERR_IO：文件读写失败。  
 6. WL_ERR_FORMAT：数据格式错误。
 
