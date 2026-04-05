@@ -378,8 +378,9 @@ wildlife_result_t 语义建议：
 1. WL_OK：成功。  
 2. WL_ERR_PARAM：参数非法。  
 3. WL_ERR_NOT_FOUND：目标不存在。  
-4. WL_ERR_IO：文件读写失败。  
-5. WL_ERR_FORMAT：数据格式错误。
+4. WL_ERR_NO_SPACE：容量不足或无空槽。  
+5. WL_ERR_IO：文件读写失败。  
+6. WL_ERR_FORMAT：数据格式错误。
 
 约定：
 
